@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Target
+  - BombPos
+  - EscapePos
+  - Character
+  - Ground
   layers:
   - Default
   - TransparentFX

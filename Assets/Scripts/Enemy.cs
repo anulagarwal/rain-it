@@ -44,6 +44,17 @@ public class Enemy : MonoBehaviour
 
         }
     }
+
+
+    #endregion
+
+    #region Core Functions
+
+    public void Run()
+    {
+
+    }
+
     #endregion
 
 }

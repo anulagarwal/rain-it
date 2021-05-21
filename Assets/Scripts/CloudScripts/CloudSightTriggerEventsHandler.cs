@@ -15,6 +15,11 @@ public class CloudSightTriggerEventsHandler : MonoBehaviour
         {
             CloudCustomComponentsHandler.Instance.GetCloudDataHandler.CharacterObjects.Add(other.gameObject);
         }
+        if(other.gameObject.tag == "Character")
+        {
+            CloudCustomComponentsHandler.Instance.GetCloudDataHandler.CharacterObjects.Add(other.gameObject);
+            other.gameObject.GetComponent<Character>().Escape();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -22,6 +27,11 @@ public class CloudSightTriggerEventsHandler : MonoBehaviour
         if (other.gameObject.tag == "Target")
         {
             CloudCustomComponentsHandler.Instance.GetCloudDataHandler.CharacterObjects.Remove(other.gameObject);
+        }
+        if (other.gameObject.tag == "Character")
+        {
+            CloudCustomComponentsHandler.Instance.GetCloudDataHandler.CharacterObjects.Remove(other.gameObject);
+
         }
     }
     #endregion
